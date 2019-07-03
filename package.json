@@ -71,7 +71,8 @@
     "styled-components": "^3.2.3",
     "validator": "^9.4.1",
     "web3": "1.0.0-beta.34",
-    "web3-provider-engine": "14.0.4"
+    "web3-provider-engine": "14.0.4",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "HTTPS=true react-app-rewired start",
@@ -86,7 +87,9 @@
     "predeploy": "true || REACT_APP_NODE_ENV=production npm run build",
     "deploy": "true || gh-pages -d build --dotfiles true",
     "prettier-all": "prettier --write '**/*.{js,json,jsx,yml,yaml,md}'",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "duplicate-package-checker-webpack-plugin": "^2.1.0",
@@ -124,5 +127,6 @@
     "hooks": {
       "pre-commit": "./pre-commit.sh"
     }
-  }
+  },
+  "snyk": true
 }
