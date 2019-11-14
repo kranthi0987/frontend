@@ -70,7 +70,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^3.2.3",
     "validator": "^9.4.1",
-    "web3": "1.0.0-beta.34",
+    "web3": "1.2.0",
     "web3-provider-engine": "14.0.4"
   },
   "scripts": {
